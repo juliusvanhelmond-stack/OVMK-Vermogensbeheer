@@ -12,13 +12,13 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Individueel vermogensbeheer",
   description:
-    "De individuele Value Investing-beheerrekening van OVMK: persoonlijk vermogensbeheer vanaf € 500.000, met de portefeuille in depot bij InsingerGilissen.",
+    "De individuele Value Investing-beheerrekening van OVMK: persoonlijk vermogensbeheer vanaf € 500.000, met de portefeuille in depot bij InsingerGilissen.",
   path: "/vermogensbeheer",
 });
 
 const features = [
   { t: "Vorm", d: "Individuele beheerrekening" },
-  { t: "Instapbedrag", d: "Vanaf € 500.000" },
+  { t: "Instapbedrag", d: "Vanaf € 500.000" },
   { t: "Beleggingsstijl", d: "Value Investing" },
   { t: "Beleggingen", d: "Aandelen en obligaties van beursgenoteerde ondernemingen" },
   { t: "Markten", d: "Vooral Nederland, Engeland en Hong Kong" },
@@ -36,7 +36,7 @@ export default function VermogensbeheerPage() {
         intro={
           <p>
             Wij bieden Value Investing aan in de vorm van individuele beheerrekeningen. Dat is mogelijk vanaf een bedrag
-            van € 500.000.
+            van € 500.000.
           </p>
         }
         image={{

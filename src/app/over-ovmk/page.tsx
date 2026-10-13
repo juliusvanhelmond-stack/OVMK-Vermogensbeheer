@@ -94,10 +94,11 @@ export default function OverOvmkPage() {
             </div>
           ))}
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-6">
+        <div className="mt-10 grid gap-4 sm:grid-cols-3 sm:gap-6">
           {team.map((p, i) => (
             <div key={p.name} data-reveal style={{ ["--reveal-i" as string]: i }}>
-              <TeamProfile person={p} />
+              <TeamProfile person={p} size="row" className="sm:hidden" />
+              <TeamProfile person={p} className="hidden sm:block" />
             </div>
           ))}
         </div>

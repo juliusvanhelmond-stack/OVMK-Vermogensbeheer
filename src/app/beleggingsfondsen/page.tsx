@@ -71,7 +71,7 @@ export default function FondsenPage() {
               className="bg-white p-7"
               aria-labelledby={`fund-${i}`}
             >
-              <h3 id={`fund-${i}`} className="t-sub text-green-deep">
+              <h3 id={`fund-${i}`} translate="no" className="t-sub text-green-deep">
                 {f.name}
               </h3>
               <p className="figures mt-2 text-[0.9375rem] text-ink-soft">ISIN {f.isin}</p>
@@ -137,7 +137,7 @@ export default function FondsenPage() {
               naar{" "}
               <a
                 href={`mailto:${company.email}?subject=${encodeURIComponent("Aanmelding kwartaalnieuwsbrief")}`}
-                className="link-underline font-semibold text-green-deep"
+                className="link-underline inline-block py-0.5 font-semibold text-green-deep"
               >
                 {company.email}
               </a>

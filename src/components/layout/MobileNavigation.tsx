@@ -22,19 +22,39 @@ export function MobileNavigation() {
 
   useEffect(() => {
     if (!open) return;
+    const panel = document.getElementById(panelId);
+    const background = [document.getElementById("inhoud"), document.querySelector("footer")].filter(Boolean) as HTMLElement[];
+    background.forEach((el) => el.setAttribute("inert", ""));
+    document.body.style.overflow = "hidden";
+    panel?.querySelector<HTMLElement>("a")?.focus();
+
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
         buttonRef.current?.focus();
+        return;
+      }
+      // Focus blijft binnen menuknop en paneel.
+      if (e.key === "Tab" && panel) {
+        const focusables = [buttonRef.current, ...Array.from(panel.querySelectorAll<HTMLElement>("a"))].filter(Boolean) as HTMLElement[];
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     };
     document.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
+      background.forEach((el) => el.removeAttribute("inert"));
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [open, panelId]);
 
   const items = [{ href: "/", label: "Home" }, ...navigation, { href: "/contact", label: "Contact" }];
 
@@ -54,9 +74,9 @@ export function MobileNavigation() {
       <div
         id={panelId}
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[77px] z-40 overflow-y-auto bg-green-deep text-on-green on-green"
+        className="on-green fixed inset-x-0 bottom-0 top-[77px] z-40 overflow-y-auto overscroll-contain bg-green-deep text-on-green"
       >
-        <nav aria-label="Mobiele navigatie" className="px-[var(--gutter)] pb-10 pt-6">
+        <nav aria-label="Mobiele navigatie" className="px-[var(--gutter)] pb-[max(2.5rem,env(safe-area-inset-bottom))] pt-6">
           <ul>
             {items.map((item) => {
               const active = pathname === item.href;
@@ -81,11 +101,11 @@ export function MobileNavigation() {
               {company.street}, {company.postalCode} {company.city}
             </p>
             <p>
-              <a href={company.phoneHref} className="text-on-green underline-offset-4 hover:underline">
+              <a href={company.phoneHref} className="inline-block py-2 text-on-green underline-offset-4 hover:underline">
                 {company.phone}
               </a>
               {" · "}
-              <a href={`mailto:${company.email}`} className="text-on-green underline-offset-4 hover:underline">
+              <a href={`mailto:${company.email}`} className="inline-block py-2 text-on-green underline-offset-4 hover:underline">
                 {company.email}
               </a>
             </p>

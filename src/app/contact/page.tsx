@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/interactive/ContactForm";
 import { company, copyOnRequest, office, partners, team } from "@/data/site";
 import { TeamProfile } from "@/components/sections/TeamProfile";
@@ -29,8 +30,14 @@ export default function ContactPage() {
             <p className="t-lead hero-in mt-6 max-w-[42ch]" style={{ ["--i" as string]: 2 }}>
               Wij nodigen u van harte uit voor een kennismakingsgesprek op ons kantoor in Gouda.
             </p>
+            <div className="hero-in mt-8 flex flex-wrap gap-3" style={{ ["--i" as string]: 3 }}>
+              <Button href={company.phoneHref}>Bel {company.phone}</Button>
+              <Button href={`mailto:${company.email}`} variant="light" className="bg-white">
+                Mail ons
+              </Button>
+            </div>
 
-            <address className="hero-in mt-10 not-italic" style={{ ["--i" as string]: 3 }}>
+            <address className="hero-in mt-10 not-italic" style={{ ["--i" as string]: 4 }}>
               <dl className="border-t border-neutral">
                 <div className="grid gap-1 border-b border-neutral py-4 sm:grid-cols-[8rem_1fr]">
                   <dt className="text-ink-soft">Adres</dt>
@@ -44,7 +51,7 @@ export default function ContactPage() {
                 <div className="grid gap-1 border-b border-neutral py-4 sm:grid-cols-[8rem_1fr]">
                   <dt className="text-ink-soft">Telefoon</dt>
                   <dd>
-                    <a href={company.phoneHref} className="link-underline figures font-semibold text-green-deep">
+                    <a href={company.phoneHref} className="link-underline figures inline-block py-1 font-semibold text-green-deep">
                       {company.phone}
                     </a>
                   </dd>
@@ -52,7 +59,7 @@ export default function ContactPage() {
                 <div className="grid gap-1 border-b border-neutral py-4 sm:grid-cols-[8rem_1fr]">
                   <dt className="text-ink-soft">E-mail</dt>
                   <dd>
-                    <a href={`mailto:${company.email}`} className="link-underline font-semibold text-green-deep">
+                    <a href={`mailto:${company.email}`} className="link-underline inline-block py-1 font-semibold text-green-deep">
                       {company.email}
                     </a>
                   </dd>
@@ -62,7 +69,7 @@ export default function ContactPage() {
                     <dt className="text-ink-soft">Mobiel</dt>
                     <dd>
                       <span className="block font-semibold text-green-deep">{p.name}</span>
-                      <a href={p.mobileHref} className="link-underline figures text-green-deep">
+                      <a href={p.mobileHref} className="link-underline figures inline-block py-1 text-green-deep">
                         {p.mobile}
                       </a>
                     </dd>
@@ -91,11 +98,11 @@ export default function ContactPage() {
               Ons kantoor ligt aan de Tielweg 16 in {company.district}, Gouda. Een routebeschrijving kunt u als pdf downloaden.
             </p>
             <div data-reveal className="mt-6 flex flex-col items-start gap-3" style={{ ["--reveal-i" as string]: 2 }}>
-              <a href={company.routeplanner} target="_blank" rel="noopener noreferrer" className="font-semibold text-green-deep">
+              <a href={company.routeplanner} target="_blank" rel="noopener noreferrer" className="inline-block py-1 font-semibold text-green-deep">
                 <span className="link-underline">Routeplanner Tielweg 16 (pdf)</span>
                 <span className="sr-only"> (opent in nieuw venster)</span>
               </a>
-              <a href={company.mapsUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-green-deep">
+              <a href={company.mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-block py-1 font-semibold text-green-deep">
                 <span className="link-underline">Open in OpenStreetMap</span>
                 <span className="sr-only"> (opent in nieuw venster)</span>
               </a>
@@ -119,10 +126,11 @@ export default function ContactPage() {
         <h2 id="team-title" data-reveal className="t-section text-green-deep">
           U spreekt met
         </h2>
-        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6">
+        <div className="mt-10 grid gap-4 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-5">
           {[...partners, ...team].map((p, i) => (
             <div key={p.name} data-reveal style={{ ["--reveal-i" as string]: i }}>
-              <TeamProfile person={p} />
+              <TeamProfile person={p} size="row" className="sm:hidden" />
+              <TeamProfile person={p} className="hidden sm:block" />
             </div>
           ))}
         </div>

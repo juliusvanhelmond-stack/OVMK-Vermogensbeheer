@@ -47,7 +47,7 @@ export function HomeHero() {
             fill
             priority
             sizes="(min-width: 1024px) 45vw, 100vw"
-            className="hero-photo object-cover object-[50%_42%]"
+            className="hero-photo object-cover object-[50%_22%] lg:object-[50%_42%]"
           />
           <figcaption className="absolute bottom-0 left-0 bg-green-deep/90 px-4 py-2.5 text-[0.9375rem] leading-snug text-on-green">
             De Waag aan de Markt, Gouda (1668). Foto: Richard Broekhuijzen, CC BY-SA 3.0

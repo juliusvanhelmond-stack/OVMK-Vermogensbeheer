@@ -78,7 +78,7 @@ export function SpreidingRekenaar({ tone = "light", className }: { tone?: "light
       </div>
       <p className={cn("mt-4 text-[0.9375rem] leading-relaxed", dark ? "text-on-green-soft" : "text-ink-soft")}>
         Bij aanvang is een individueel belang in principe niet groter dan circa 2% van de portefeuille. Het gouden
-        blokje is één positie. Individuele beheerrekeningen zijn mogelijk vanaf € 500.000.
+        blokje is één positie. Individuele beheerrekeningen zijn mogelijk vanaf € 500.000.
       </p>
     </div>
   );

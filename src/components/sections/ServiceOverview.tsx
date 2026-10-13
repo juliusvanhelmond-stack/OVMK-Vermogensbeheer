@@ -23,7 +23,7 @@ export function ServiceOverview() {
           </h3>
           <p className="mt-4 max-w-[48ch]">
             Een eigen beheerrekening, belegd volgens Value Investing en bewaard bij InsingerGilissen. Mogelijk vanaf
-            € 500.000. U heeft rechtstreeks contact met de partners.
+            € 500.000. U heeft rechtstreeks contact met de partners.
           </p>
           <SpreidingRekenaar className="mt-8" />
           <div className="mt-8">
@@ -47,7 +47,7 @@ export function ServiceOverview() {
           <ul className="mt-8">
             {funds.map((f) => (
               <li key={f.name} className="flex flex-wrap items-baseline justify-between gap-x-4 border-t border-white/15 py-4 last:border-b">
-                <span className="text-[1.0625rem] font-semibold">{f.name}</span>
+                <span translate="no" className="text-[1.0625rem] font-semibold">{f.name}</span>
                 <span className="figures text-[0.9375rem] text-on-green-soft">{f.isin}</span>
               </li>
             ))}

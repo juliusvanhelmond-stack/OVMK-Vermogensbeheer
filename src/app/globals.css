@@ -15,6 +15,7 @@
   --on-green: #f5f1e8;
   --on-green-soft: #c9d6cf;
   --white: #ffffff;
+  --error: #9b2c1f;
 
   --container: 1240px;
   --gutter: 20px;
@@ -53,6 +54,7 @@
   --color-ink-soft: var(--ink-soft);
   --color-on-green: var(--on-green);
   --color-on-green-soft: var(--on-green-soft);
+  --color-error: var(--error);
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -76,6 +78,17 @@ body {
   font-feature-settings: "ss01" off;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: color-mix(in srgb, var(--green) 14%, transparent);
 }
 
 ::selection {

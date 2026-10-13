@@ -27,13 +27,13 @@ export function HomePeople() {
             <TeamProfile person={p} size="large" />
           </div>
         ))}
-        <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:col-span-2 sm:grid-cols-3 lg:col-span-4 lg:grid-cols-2 lg:content-end lg:gap-x-6">
+        <ul className="grid gap-4 sm:col-span-2 sm:grid-cols-2 lg:col-span-4 lg:grid-cols-1 lg:content-between lg:gap-0 lg:pb-9">
           {team.map((p, i) => (
-            <div key={p.name} data-reveal style={{ ["--reveal-i" as string]: i + 2 }}>
-              <TeamProfile person={p} />
-            </div>
+            <li key={p.name} data-reveal style={{ ["--reveal-i" as string]: i + 2 }}>
+              <TeamProfile person={p} size="row" />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </Section>
   );
