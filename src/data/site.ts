@@ -9,6 +9,8 @@ export const company = {
   street: "Tielweg 16",
   postalCode: "2803 PK",
   city: "Gouda",
+  // Bevestigd via het Google-bedrijfsprofiel van OVMK.
+  district: "De Goudse Poort",
   phone: "0182-543676",
   phoneHref: "tel:+31182543676",
   email: "info@ovmk.nl",

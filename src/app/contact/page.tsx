@@ -38,6 +38,7 @@ export default function ContactPage() {
                     {company.street}
                     <br />
                     {company.postalCode} {company.city}
+                    <span className="block font-normal text-ink-soft">{company.district}</span>
                   </dd>
                 </div>
                 <div className="grid gap-1 border-b border-neutral py-4 sm:grid-cols-[8rem_1fr]">
@@ -87,7 +88,7 @@ export default function ContactPage() {
               Route
             </h2>
             <p data-reveal className="mt-5" style={{ ["--reveal-i" as string]: 1 }}>
-              Ons kantoor ligt aan de Tielweg 16 in Gouda. Een routebeschrijving kunt u als pdf downloaden.
+              Ons kantoor ligt aan de Tielweg 16 in {company.district}, Gouda. Een routebeschrijving kunt u als pdf downloaden.
             </p>
             <div data-reveal className="mt-6 flex flex-col items-start gap-3" style={{ ["--reveal-i" as string]: 2 }}>
               <a href={company.routeplanner} target="_blank" rel="noopener noreferrer" className="font-semibold text-green-deep">
