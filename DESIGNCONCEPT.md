@@ -52,8 +52,8 @@ van de klantbriefing:
 
 ## Beeld
 
-- Eigen beeld van OVMK: de vijf portretten van het team, het logo, het
-  uitzicht vanuit het kantoor (lage resolutie, 669×152).
+- Eigen beeld van OVMK: het logo en de vijf portretten van het team. OVMK heeft
+  toestemming gegeven voor het gebruik van logo en portretten (bevestigd 13 oktober 2026).
 - Gevonden beeld (open licenties, op de site vermeld): de Waag (2012), de Markt met
   de Waag, Braun & Hogenberg's gezicht op "Goude" (1585), een Goudse gracht en de
   Hollandse IJssel. Nergens gepresenteerd als het kantoor van OVMK.
