@@ -1,7 +1,11 @@
-// Alle bedrijfsgegevens hieronder zijn overgenomen van www.ovmk.nl (geraadpleegd 13 oktober 2026).
+// Alle bedrijfsgegevens hieronder zijn overgenomen van www.ovmk.nl (geraadpleegd 13 oktober 2026,
+// documenten en teksten opnieuw gecontroleerd op 13 november 2026).
 // Wijzig niets zonder bron: dit is een financiële dienstverlener.
 
-const DOCS = "https://www.ovmk.nl/storage/downloads";
+// Alle documenten staan op deze site zelf, in public/documenten/ (overgezet van ovmk.nl).
+// Een document vervangen: zie "Documenten bijwerken" in README.md. De build controleert
+// of elk bestand hieronder echt bestaat (scripts/check-documenten.mjs).
+const DOCS = "/documenten";
 
 export const company = {
   shortName: "OVMK",
@@ -116,7 +120,7 @@ export const legalDocs: Doc[] = [
 ];
 
 export const managementDocs: Doc[] = [
-  { label: "Rendement individuele beheerrekening", href: `${DOCS}/performance-2026-09.pdf`, note: "t/m september 2026" },
+  { label: "Rendement individuele beheerrekening", href: `${DOCS}/performance-2026-10.pdf`, note: "t/m oktober 2026" },
   { label: "Ex-ante kostenoverzicht beheerrekeningen", href: `${DOCS}/ex-ante-kosten-incl-illustratie-van-beheerrekeningen-mei-2025.pdf`, note: "mei 2025" },
   ...legalDocs,
 ];
@@ -135,7 +139,7 @@ export const funds: Fund[] = [
     name: "OVMK Value Fund",
     isin: "NL0011225271",
     docs: [
-      { label: "Maandoverzicht", href: `${DOCS}/2026-09-maandoverzicht-vf.pdf`, note: "september 2026" },
+      { label: "Maandoverzicht", href: `${DOCS}/2026-10-maandoverzicht-vf.pdf`, note: "oktober 2026" },
       { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-iii-aanvullend-prospectus-ovmk-value-fund-sept-2026.pdf`, note: "bijlage III" },
       { label: "PRIIPs KID", href: `${DOCS}/kiddoc-2026-06-29-en-00-2026-06-29-nl0011225271-ovmk-paraplufonds-ovmk-value-fund-c1.pdf`, note: "juni 2026" },
       { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "mei 2025" },
@@ -145,8 +149,8 @@ export const funds: Fund[] = [
     name: "OVMK Special Bond Fund",
     isin: "NL0010998860",
     docs: [
-      { label: "Maandoverzicht", href: `${DOCS}/2026-09-maandoverzicht-sbf.pdf`, note: "september 2026" },
-      { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-ii-aanvullend-prospectus-ovmk-special-bond-fund-sept-2026.pdf`, note: "bijlage II" },
+      { label: "Maandoverzicht", href: `${DOCS}/2026-10-maandoverzicht-sbf.pdf`, note: "oktober 2026" },
+      { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-ii-aanvullend-prospectus-ovmk-special-bond-fund-sept-2026.docx`, note: "bijlage II, Word" },
       { label: "PRIIPs KID", href: `${DOCS}/kiddoc-2026-06-29-en-00-2026-06-29-nl0010998860-ovmk-paraplufonds-ovmk-special-bond-fund-c1.pdf`, note: "juni 2026" },
       { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "mei 2025" },
     ],
@@ -155,7 +159,7 @@ export const funds: Fund[] = [
     name: "OVMK Hong Kong Value Fund",
     isin: "NL0002097341",
     docs: [
-      { label: "Maandoverzicht", href: `${DOCS}/2026-09-maandoverzicht-hkvf.pdf`, note: "september 2026" },
+      { label: "Maandoverzicht", href: `${DOCS}/2026-10-maandoverzicht-hkvf.pdf`, note: "oktober 2026" },
       { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-i-aanvullend-prospectus-ovmk-hong-kong-value-fund-sept-2026.pdf`, note: "bijlage I" },
       { label: "PRIIPs KID", href: `${DOCS}/kiddoc-2026-06-29-en-00-2026-06-29-nl0002097341-ovmk-paraplufonds-ovmk-hong-kong-value-fund-c1.pdf`, note: "juni 2026" },
       { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "mei 2025" },
@@ -202,6 +206,7 @@ export const riskNotice =
 export const umbrellaDocs: Doc[] = [
   { label: "Prospectus OVMK Paraplufonds", href: `${DOCS}/prospectus-ovmk-paraplufonds-sept-2026.pdf`, note: "september 2026" },
   { label: "Voorwaarden van Beheer en Bewaring", href: `${DOCS}/bijlage-iv-voorwaarden-beheer-bewaring-ovmk-paraplufonds-v6-2023.pdf`, note: "bijlage IV" },
+  { label: "Privacy statement", href: `${DOCS}/privacy-statement.pdf` },
   { label: "Jaarverslag fondsen 2025", href: `${DOCS}/jaarrekening-ovmk-paraplufonds-2025.pdf`, note: "2025" },
   { label: "Jaarverslag fondsen 2024", href: `${DOCS}/2024-ovmk-paraplufonds-jaarrekening.pdf`, note: "2024" },
   { label: "Jaarverslag fondsen 2023", href: `${DOCS}/2023-ovmk-paraplufonds-jaarrekening-wg.pdf`, note: "2023" },
@@ -210,4 +215,4 @@ export const umbrellaDocs: Doc[] = [
 
 export const office = { lat: 52.02148, lon: 4.68108 } as const;
 
-export const copyOnRequest = "Van alle verplichte informatie wordt op verzoek een afschrift verstrekt tegen kostprijs.";
+export const copyOnRequest = "Alle wettelijk verplichte informatie wordt op verzoek kosteloos ter beschikking gesteld.";

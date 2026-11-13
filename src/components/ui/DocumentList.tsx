@@ -2,6 +2,10 @@ import type { Doc } from "@/data/site";
 import { cn } from "@/lib/cn";
 
 // Twee-zijdige rijen: document links, datum of kenmerk rechts. Linkt naar de echte pdf's op ovmk.nl.
+function fileType(href: string) {
+  return href.toLowerCase().endsWith(".docx") ? "Word-document" : "pdf";
+}
+
 export function DocumentList({ docs, className, tone = "light" }: { docs: Doc[]; className?: string; tone?: "light" | "dark" }) {
   return (
     <ul className={cn("divide-y", tone === "light" ? "divide-neutral" : "divide-white/15", className)}>
@@ -18,7 +22,7 @@ export function DocumentList({ docs, className, tone = "light" }: { docs: Doc[];
           >
             <span className="flex-1 font-semibold leading-snug">
               <span className="decoration-gold decoration-2 underline-offset-4 group-hover:underline">{doc.label}</span>
-              <span className="sr-only"> (pdf, opent in nieuw venster)</span>
+              <span className="sr-only"> ({fileType(doc.href)}, opent in nieuw venster)</span>
             </span>
             {doc.note && (
               <span className={cn("figures shrink-0 text-[0.9375rem]", tone === "light" ? "text-ink-soft" : "text-on-green-soft")}>
