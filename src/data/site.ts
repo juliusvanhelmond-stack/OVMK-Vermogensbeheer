@@ -150,7 +150,7 @@ export const funds: Fund[] = [
     isin: "NL0010998860",
     docs: [
       { label: "Maandoverzicht", href: `${DOCS}/2026-10-maandoverzicht-sbf.pdf`, note: "oktober 2026" },
-      { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-ii-aanvullend-prospectus-ovmk-special-bond-fund-sept-2026.docx`, note: "bijlage II, Word" },
+      { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-ii-aanvullend-prospectus-ovmk-special-bond-fund-sept-2026.pdf`, note: "bijlage II" },
       { label: "PRIIPs KID", href: `${DOCS}/kiddoc-2026-06-29-en-00-2026-06-29-nl0010998860-ovmk-paraplufonds-ovmk-special-bond-fund-c1.pdf`, note: "juni 2026" },
       { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "mei 2025" },
     ],
