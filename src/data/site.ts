@@ -121,11 +121,11 @@ export const legalDocs: Doc[] = [
 
 export const managementDocs: Doc[] = [
   { label: "Rendement individuele beheerrekening", href: `${DOCS}/performance-2026-10.pdf`, note: "t/m oktober 2026" },
-  { label: "Ex-ante kostenoverzicht beheerrekeningen", href: `${DOCS}/ex-ante-kosten-incl-illustratie-van-beheerrekeningen-mei-2025.pdf`, note: "mei 2025" },
+  { label: "Ex-ante kostenoverzicht beheerrekeningen", href: `${DOCS}/ex-ante-kosten-incl-illustratie-van-beheerrekeningen-sept-2026.pdf`, note: "september 2026" },
   ...legalDocs,
 ];
 
-const FUND_COSTS = `${DOCS}/ex-ante-kosten-incl-illustratie-van-fondsbeleggen-mei-2025.pdf`;
+const FUND_COSTS = `${DOCS}/ex-ante-kosten-incl-illustratie-van-fondsbeleggen-nov-2026.pdf`;
 
 export type Fund = {
   name: string;
@@ -142,7 +142,7 @@ export const funds: Fund[] = [
       { label: "Maandoverzicht", href: `${DOCS}/2026-10-maandoverzicht-vf.pdf`, note: "oktober 2026" },
       { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-iii-aanvullend-prospectus-ovmk-value-fund-sept-2026.pdf`, note: "bijlage III" },
       { label: "PRIIPs KID", href: `${DOCS}/kiddoc-2026-06-29-en-00-2026-06-29-nl0011225271-ovmk-paraplufonds-ovmk-value-fund-c1.pdf`, note: "juni 2026" },
-      { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "mei 2025" },
+      { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "november 2026" },
     ],
   },
   {
@@ -152,7 +152,7 @@ export const funds: Fund[] = [
       { label: "Maandoverzicht", href: `${DOCS}/2026-10-maandoverzicht-sbf.pdf`, note: "oktober 2026" },
       { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-ii-aanvullend-prospectus-ovmk-special-bond-fund-sept-2026.pdf`, note: "bijlage II" },
       { label: "PRIIPs KID", href: `${DOCS}/kiddoc-2026-06-29-en-00-2026-06-29-nl0010998860-ovmk-paraplufonds-ovmk-special-bond-fund-c1.pdf`, note: "juni 2026" },
-      { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "mei 2025" },
+      { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "november 2026" },
     ],
   },
   {
@@ -162,7 +162,7 @@ export const funds: Fund[] = [
       { label: "Maandoverzicht", href: `${DOCS}/2026-10-maandoverzicht-hkvf.pdf`, note: "oktober 2026" },
       { label: "Aanvullend prospectus", href: `${DOCS}/bijlage-i-aanvullend-prospectus-ovmk-hong-kong-value-fund-sept-2026.pdf`, note: "bijlage I" },
       { label: "PRIIPs KID", href: `${DOCS}/kiddoc-2026-06-29-en-00-2026-06-29-nl0002097341-ovmk-paraplufonds-ovmk-hong-kong-value-fund-c1.pdf`, note: "juni 2026" },
-      { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "mei 2025" },
+      { label: "Ex-ante kostenoverzicht", href: FUND_COSTS, note: "november 2026" },
     ],
   },
 ];
