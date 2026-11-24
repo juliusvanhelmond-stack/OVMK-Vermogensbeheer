@@ -210,7 +210,7 @@ export const umbrellaDocs: Doc[] = [
   { label: "Jaarverslag fondsen 2025", href: `${DOCS}/jaarrekening-ovmk-paraplufonds-2025.pdf`, note: "2025" },
   { label: "Jaarverslag fondsen 2024", href: `${DOCS}/2024-ovmk-paraplufonds-jaarrekening.pdf`, note: "2024" },
   { label: "Jaarverslag fondsen 2023", href: `${DOCS}/2023-ovmk-paraplufonds-jaarrekening-wg.pdf`, note: "2023" },
-  { label: "Duurzaamheid", href: `${DOCS}/duurzaamheid-vermogensbeheer-mei-2025.pdf`, note: "mei 2025" },
+  { label: "Duurzaamheid", href: `${DOCS}/duurzaamheid-vermogensbeheer-mei-2026.pdf`, note: "mei 2026" },
 ];
 
 export const office = { lat: 52.02148, lon: 4.68108 } as const;
